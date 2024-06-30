@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,12 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "light-desktop": "url('/bg-desktop-light.jpg')",
+        "dark-desktop": "url('/bg-desktop-dark.jpg')",
+        "light-mobile": "url('/bg-mobile-light.jpg')",
+        "dark-mobile": "url('/bg-mobile-dark.jpg')",
+        "check-gradient": "linear-gradient(145deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))",
       },
     },
   },
   plugins: [],
+  darkMode: "class",
 };
 export default config;
