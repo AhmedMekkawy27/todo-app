@@ -13,7 +13,7 @@ export default function Home() {
           <ThemeSwitch />
         </div>
         <Form />
-        <div className="w-full h-[60%] md:h-[65%] dark:bg-[#25273c] bg-white rounded-md shadow-2xl flex flex-col justify-between">
+        <div className="w-full h-[55%] md:h-[65%] dark:bg-[#25273c] bg-white rounded-md shadow-2xl flex flex-col justify-between">
           <TodosBody />
           <Footer />
         </div>
