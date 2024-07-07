@@ -1,11 +1,8 @@
 "use client"
 import { TfiClose } from "react-icons/tfi";
 import { TiTick } from 'react-icons/ti'
-import { useContext } from 'react';
-import { ITodo, StateContext } from './StateProvider';
-import Button from "./Button";
+import { ITodo } from './StateProvider';
 const Todos = ({ todo, onclick, rem }: { todo: ITodo['todos'], onclick?: (event: React.MouseEvent<HTMLDivElement>) => void, rem: (event: React.MouseEvent<HTMLButtonElement>) => void }) => {
-    let { todos, setTodos } = useContext(StateContext)
     return (
         <div className='w-full h-[10%] px-7 py-10 border-b-[1px] flex justify-between items-center dark:border-white/[0.2] border-black/[0.2]'>
             <div className={`w-6 h-6 flex justify-center items-center bg-white rounded-full ${todo.status && 'bg-check-gradient'} border-[1px] border-black/[0.2] dark:border-white/[0.2]`} onClick={onclick}>
