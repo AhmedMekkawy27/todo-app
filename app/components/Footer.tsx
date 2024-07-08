@@ -71,6 +71,7 @@ const Footer = () => {
             })
         }
     }
+    console.log(clicked[0].status)
     return (
         <footer className='w-[100%] h-[12%] px-5 py-7 z-40py-6 dark:bg-[#25273c] bg-white flex justify-between rounded-b-md items-center border-t-[1px] dark:border-white/[0.2] border-black/[0.2] self-end'>
             <div className='flex justify-between items-center w-full relative'>
