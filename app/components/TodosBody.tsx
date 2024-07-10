@@ -52,7 +52,7 @@ const TodosBody = () => {
     }, []);
 
     return (
-        <div className="overflow-y-auto ">
+        <div className="overflow-y-auto">
             {todos.filter((todo) => todo.user === localStorage.getItem("user")).map((todo, index) => (
                 <Todos key={index} onclick={(event) => handleStatus(todo.id)} todo={todo} rem={(event) => handleDelete(todo.id)} />
             ))}
