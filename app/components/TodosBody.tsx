@@ -5,6 +5,7 @@ import { useEffect, useContext } from "react";
 import { StateContext } from "./StateProvider";
 import db from "@/firebase";
 import { collection, query, setDoc, deleteDoc, doc, onSnapshot, orderBy } from 'firebase/firestore';
+import { permanentRedirect } from "next/navigation";
 const TodosBody = () => {
     const { todos, setTodos } = useContext(StateContext)
     const handleStatus = (todoId: string) => {
@@ -42,11 +43,7 @@ const TodosBody = () => {
         })
 
         if (!localStorage.getItem("user")) {
-            let userInput = prompt("Enter your username")
-            while (!userInput) {
-                userInput = prompt("Enter your username")
-            }
-            localStorage.setItem("user", userInput.toLowerCase())
+            permanentRedirect('/login')
         }
 
     }, []);
