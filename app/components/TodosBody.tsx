@@ -28,7 +28,7 @@ const TodosBody = () => {
     }
 
     useEffect(() => {
-
+        localStorage.clear();
         const q = query(collection(db, "todo-list"), orderBy("timestamp", "desc"));
         const unsubscribe = onSnapshot(q, (snap) => {
             setTodos(snap.docs.map(doc => (
